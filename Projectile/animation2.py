@@ -3,7 +3,7 @@
 # multiple-shot cannonball animation
 
 from math import sqrt, sin, cos, radians, degrees
-from graphics import *
+from graphics import GraphWin, Circle, Line, Point
 from projectile import Projectile
 from button import Button
 
