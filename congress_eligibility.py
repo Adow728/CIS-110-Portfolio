@@ -1,3 +1,8 @@
+# Congress Eligibility Checker
+# Aiden Dow
+# Unknown - Revised 12/20/2020
+
+import datetime
 
 def main():
     print("Are you eligible for Congress? Let's see!")
@@ -19,3 +24,7 @@ def main():
         print("Not eligible for Congress")
 
 main()
+
+print()
+print("Aiden Dow")
+print(datetime.datetime.now())
