@@ -1,28 +1,25 @@
-"""
-Program name: 
-Author: Aiden Dow
-Class: CIS-110
-Description:
-Date created/modified: 
-Notes:
-"""
+# Properties of a Triangle
+# Calculates the corners, perimeter, and area of a user-defined triangle
+# Aiden Dow
+# Unknown - Revised 12/20/2020
 
 import datetime
 
 import math
-from graphics import *
+from graphics import Point, Polygon, GraphWin, Text
 
 def square(x):
     return x * x
 
 def distance(p1, p2):
-    dist = math.sqrt(square(p2.getX() - p1.getX())
-                     + square(p2.getY() - p1.getY()))
+    """Returns the distance between two points"""
+    dist = math.sqrt(square(p2.getX() - p1.getX()) + square(p2.getY() - p1.getY()))
     return dist
 
-def triArea(a, b, c):
-    s = (a+b+c)/2.0
-    return math.sqrt(s*(s-a)*(s-b)*(s-c))
+def triArea(leg1, leg2, leg3):
+    """Returns the area of a triangle, given the lengths of the three sides"""
+    s = (leg1 + leg2 + leg3) / 2.0
+    return math.sqrt(s * (s - leg1) * (s - leg2) * (s - leg3))
 
 def main():
     win = GraphWin("Draw a Triangle",500,500)
@@ -39,7 +36,7 @@ def main():
     p3.draw(win)
 
     # Use Polygon object to draw the triangle
-    triangle = Polygon(p1,p2,p3)
+    triangle = Polygon(p1, p2, p3)
     triangle.setFill("peachpuff")
     triangle.setOutline("cyan")
     triangle.draw(win)
@@ -55,10 +52,7 @@ def main():
     # Wait for another click to exit
     win.getMouse()
 
-    print()
-    print("Aiden Dow")
-    print("CIS-110")
-    print("Program # CHANGE")
-    print(datetime.datetime.now())
-
 main()
+
+print("Aiden Dow")
+print(datetime.datetime.now())
