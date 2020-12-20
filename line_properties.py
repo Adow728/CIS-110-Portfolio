@@ -1,23 +1,13 @@
-"""
-Program name: Properties of a line
-Author: Aiden Dow
-Class: CIS-110
-Description: This program calculates the endpoints of a line
-Date created/modified: 9/26/2019
-Notes:
-"""
+# Properties of a Line
+# Calculates the endpoints, length, and slope of a user-defined line
+# Aiden Dow
+# 9/26/2019 - Revised 12/20/2020
 
 import datetime
-# Import graphics
-from graphics import *
-
-# Import math
+from graphics import GraphWin, Text, Point, Line, Circle
 import math
 
 def main():
-    # Print introduction
-    print("This program calculates the endpoints of a line") 
-
     # Create graphics window
     win = GraphWin("Properties of a line", 500, 500)
 
@@ -62,9 +52,7 @@ def main():
     # Close graphics window on mouse click
     win.getMouse()
 
-    print()
-    print("Aiden Dow")
-    print("CIS-110")
-    print(datetime.datetime.now())
-
 main()
+
+print("Aiden Dow")
+print(datetime.datetime.now())
