@@ -25,8 +25,11 @@ def getDoorPick(win, buttons):
 def showGoat(selected, carDoor, messageBox, buttons):
 	"""Shows the player a door that is not the car and deactivates it."""
 	goat = randrange(1, 4)
+
+	# If the random number is invalid, generate a new one and check it.
 	while goat == carDoor or goat == selected:
 		goat = randrange(1, 4)
+	
 	buttons[goat-1].deactivate()
 	messageBox.setText("Well, there is a goat at door {}.\nWhich door should I open?".format(goat))
 
@@ -39,7 +42,7 @@ def checkWin(selectedDoor, carDoor, messageBox):
 
 def main():
 	#set up interface
-	win = GraphWin("Three Button Monte", 350, 225)
+	win = GraphWin("Find the Car - Avoid the Goats", 350, 225)
 	win.setCoords(0, 0.75, 3.25, 3.25)
 	b1 = Button("Door 1", Point(0.25, 2.25), Point(1, 1))
 	b1.activate()
