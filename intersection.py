@@ -1,25 +1,19 @@
-"""
-Program name: Intersection
-Author: Aiden Dow
-Class: CIS-110
-Description: This program computes the intersection between a circle and a line
-Date created/modified: 9/26/2019
-Notes: All measuments in pixels
-"""
+# Intersection
+# Computes the intersection between a circle and a line
+# Aiden Dow
+# 9/26/2019 - Revised 12/20/2020
 
 import datetime
-# Import graphics
-from graphics import *
-# Import math
+from graphics import GraphWin, Circle, Line, Point
 import math
 
 def main():
     # Print introduction 
-    print("This program computes the intersection between a circle and a line")
+    print("This program computes the intersection between a circle and a horizontal line")
 
     # Get radius and y-intercept
-    radius = int(input("Please enter the radius of the circle: "))
-    y_int = int(input("Please enter the y-intercept of the line: "))
+    radius = float(input("Please enter the radius of the circle: "))
+    y_int = float(input("Please enter the y-intercept of the line: "))
 
     # Create graphics window
     win = GraphWin("Result Diagram", 500, 500)
@@ -29,15 +23,17 @@ def main():
 
     # Draw circle
     circ = Circle(Point(0, 0), radius)
+    circ.setWidth(3)
     circ.draw(win)
 
     # Draw line at y-intercept
     line = Line(Point(-10, y_int), Point(10, y_int))
+    line.setWidth(3)
     line.draw(win)
 
     # Calculate x values for intersection
     x1 = math.sqrt(radius ** 2 - y_int ** 2)
-    x2 = 0-math.sqrt(radius ** 2 - y_int ** 2)
+    x2 = 0-x1
 
     # Display x values
     print("X values of the intersections ", x1, x2)
@@ -54,9 +50,10 @@ def main():
     # Close graphics window after mouse click
     win.getMouse()
 
-    print()
-    print("Aiden Dow")
-    print("CIS-110")
-    print(datetime.datetime.now())
+    
 
 main()
+
+print()
+print("Aiden Dow")
+print(datetime.datetime.now())
