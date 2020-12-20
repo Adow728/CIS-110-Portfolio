@@ -77,7 +77,6 @@ def main():
 	win.close()    
 
 
-	print()
 	print("Aiden Dow")
 	print(datetime.datetime.now()) 
 

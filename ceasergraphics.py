@@ -1,4 +1,9 @@
+# Ceaser Cipher GUI
+# Aiden Dow
+# Unknown - Revised 12/20/2020
+
 import graphics as g
+import datetime
 
 ENCODE = "encode"
 DECODE = "decode"
@@ -48,10 +53,14 @@ decode_button = g.Button("DECODE", g.Point(4, 8), g.Point(0, 4))
 decode_button.draw(win)
 decode_button.activate()
 
+quit_button = g.Button("Quit", g.Point(3, 0.25), g.Point(4.75, 1.25))
+quit_button.draw(win)
+quit_button.activate()
+
 output_text = g.Text(g.Point(0, 2), "OUTPUT")
 output_text.draw(win)
 
-# Check to see if a 
+# Check to see if a button is clicked
 while win.isOpen():
     click = win.getMouse()
     out = "click a button"
@@ -62,8 +71,10 @@ while win.isOpen():
     if click and decode_button.clicked(click):
         out = ceaser_cipher(message_box.getText(), int(shift_box.getText()), DECODE)
 
-
+    if quit_button.clicked(click):
+        break
 
     output_text.setText(out)
 
-
+print("Aiden Dow")
+print(datetime.datetime.now())

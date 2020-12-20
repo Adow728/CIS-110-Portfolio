@@ -1,11 +1,7 @@
-"""
-Program name: Average of three w/ loop
-Author: Aiden Dow
-Class: CIS-110
-Description: Computes an average from three scores/values
-Date created/modified: 9/11/2019
-Notes:
-"""
+# Celsius to Farenheit converter
+# Converts up to 5 celsius temperatures into farenheit
+# Aiden Dow
+# 9/11/2019 - Revised 12/20/2020
 
 import datetime
 
@@ -19,9 +15,10 @@ def main():
 
     input("Press the <Enter> key to quit. ")
 
-    print()
-    print("Aiden Dow")
-    print("CIS-110")
-    print(datetime.datetime.now())
+    
 
 main()
+
+print()
+print("Aiden Dow")
+print(datetime.datetime.now())
