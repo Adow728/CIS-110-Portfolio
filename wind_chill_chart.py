@@ -1,15 +1,11 @@
-"""
-Program name: Wind chill chart
-Author: Aiden Dow
-Class: CIS-110
-Description: This program prints a chart of wind chills
-Date created/modified: 11/8/2019
-Notes:
-"""
+# Wind Chill Chart
+# Aiden Dow
+# 11/2/2019 - Revised 12/21/2020
 
 import datetime
 
 def windChill(temp, velocity):
+	"""Find the wind chill"""
 	if velocity > 3:
 		# This is the National Weather Service formula for calculating wind chill
 		return 35.74 + (0.6215 * temp) - (35.75 * (velocity ** 0.16)) + (0.4275 * temp * (velocity ** 0.16))
@@ -39,10 +35,8 @@ def main():
 			print(round(windChill(temp, wind)), end="\t")
 		print()
 
-	print()
-	print("Aiden Dow")
-	print("CIS-110")
-	print("Program 8")
-	print(datetime.datetime.now())
-
 main()
+
+print()
+print("Aiden Dow")
+print(datetime.datetime.now())

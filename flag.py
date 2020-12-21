@@ -1,21 +1,16 @@
-"""
-Program name: American Flag
-Author: Aiden Dow
-Class: CIS-110
-Description: This program displays an American flag
-Date created/modified: 9/27/2019
-Notes:
-"""
+# American Flag
+# Aiden Dow
+# 9/27/2019 - Revised 12/21/2020
 
 import datetime
 import graphics as g
 
 def main():
-    print("This program displays an American flag.")
-
+    # Initialize window
     win = g.GraphWin("America the Beautiful", 760, 400)
     win.setCoords(0, 0, 1.9, 1)
 
+    # Draw stripes
     stripeWidth = 0.0769
     stripeColor = "red"
     nextY = 0
@@ -32,12 +27,14 @@ def main():
         else:
             stripeColor = "red"
 
+    # Draw blue square in corner
     p1 = g.Point(0, 1)
     p2 = g.Point(0.76, 1-0.5385)
     r = g.Rectangle(p1, p2)
     r.setFill("blue")
     r.draw(win)
 
+    # Create initial star
     t = 1
     x1 = 0.0633
     y1 = t-0.0538+(0.0616/2)
@@ -77,10 +74,12 @@ def main():
     star.setFill("white")
     star.draw(win)
 
+    # Clone star for second set
     s2 = star.clone()
     s2.move(0.0633, -0.0538)
     s2.draw(win)
 
+    # Draw first set of stars
     for x in range(1, 6):
         star = star.clone()
         
@@ -98,6 +97,7 @@ def main():
         yStar.move(0, -0.0538 * 2)
         yStar.draw(win)
 
+    # Draw second set of star
     for x in range(1, 5):
         s2 = s2.clone()
         
@@ -116,12 +116,8 @@ def main():
         yStar.draw(win)        
         
     win.getMouse()
-        
-
-    print()
-    print("Aiden Dow")
-    print("CIS-110")
-    print("Program 4")
-    print(datetime.datetime.now())
 
 main()
+
+print("Aiden Dow")
+print(datetime.datetime.now())
