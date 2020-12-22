@@ -1,6 +1,6 @@
 # Wind Chill Chart
 # Aiden Dow
-# 11/2/2019 - Revised 12/21/2020
+# 11/9/2019 - Revised 12/21/2020
 
 import datetime
 

@@ -12,7 +12,7 @@ Notes: I added a conversion from percentage to decimal in getInputs.
 """
 
 import datetime
-from random import *
+from random import random
 
 def printIntro():
 	print("This program simulates a game of volleyball between two")
